@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+}
+
+#email-header {
+    display: flex;
+    align-items: center;
+}
+
+#logo-and-title {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+#email-logo {
+    width: 60px;
+    height: 60px;
+}
+
+h1 {
+    color: #0077B6;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 200;
+}
+
+input {
+    width: 600px;
+    height: 50px;
+    padding: 0px 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: #979dac30;
+    margin: 0px auto;
+    outline: none;
+    font-family: 'Roboto Slab', serif;
+    font-size: 16px;
+}
+
+#main-area {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+#skills {
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    background-color: #979dac30;
+    border-radius: 10px;
+    padding: 20px 40px;
+}
+
+#inbox-history {
+    width: 900px;
+    height: 70vh;
+    background-color: #33415c;
+}
