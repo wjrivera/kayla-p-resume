@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    background-color: #e3f2fd;
 }
 
 #email-header {
@@ -19,22 +20,38 @@ body {
 }
 
 h1 {
-    color: #0077B6;
+    color: #90caf9;
     font-family: 'Roboto Slab', serif;
     font-weight: 200;
 }
 
-input {
+#search-label {
+    position: relative;
+    margin: 0px auto;
+}
+
+#search {
     width: 600px;
     height: 50px;
-    padding: 0px 10px;
+    padding: 0px 40px;
     border-radius: 10px;
     border: none;
     background-color: #979dac30;
-    margin: 0px auto;
     outline: none;
     font-family: 'Roboto Slab', serif;
     font-size: 16px;
+    color: #33415c;
+}
+
+#magnify {
+    position: absolute;
+    left: 0px;
+    padding: 10px 12px;
+    pointer-events: none;
+    top: 0.3rem;
+    width: 20px;
+    height: 20px;
+    color: #979dac;
 }
 
 #main-area {
@@ -43,19 +60,93 @@ input {
     align-items: flex-start;
 }
 
-#skills {
+#skills-container {
     display: flex;
     flex-direction: column;
 }
 
 h2 {
     background-color: #979dac30;
+    color: #33415c;
     border-radius: 10px;
-    padding: 20px 40px;
+    padding: 20px 30px;
+    max-width: 100px;
+    margin-left: 5px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    font-family: 'Roboto Slab', serif;
+    font-size: 20px;
+    font-weight: 200;
+    text-align: center;
+}
+
+#skills-list {
+    list-style: none;
+    font-family: 'Roboto Slab', serif;
+    font-size: 15px;
+    margin-top: 0px;
+    padding: 5px;
+}
+
+.skill {
+    margin: 5px 0px;
+    background-color: #0353a450;
+    border-radius: 10px;
+    padding: 5px 50px;
+    color: #33415c;
+}
+
+.skill:hover {
+    background-color: #979dac30;
 }
 
 #inbox-history {
     width: 900px;
-    height: 70vh;
-    background-color: #33415c;
+    height: 90vh;
+    background-color: #33415c99;
+    margin: 0px auto;
+    border-radius: 10px;
+}
+
+#icons {
+    display: flex;
+    align-items: center;
+    padding: 20px 10px;
+    gap: 20px;
+}
+
+.top-of-inbox-icons {
+    width: 18px;
+    height: 18px;
+    color: white;
+}
+
+.refresh-and-setting:hover {
+    background-color: #33415c10;
+    border-radius: 50%;
+    padding: 2px;
+}
+
+.inbox-checkboxes {
+    width: 18px;
+    height: 18px;
+}
+
+.inbox-item {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    border-top: 1px solid #FFFFFF40;
+    border-bottom: 1px solid #FFFFFF40;
+    padding: 10px 10px;
+    font-family: 'Roboto Slab', serif;
+    font-size: 15px;
+}
+
+.inbox-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
