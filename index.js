@@ -13,3 +13,13 @@ selectAll.addEventListener("change", () => {
         inbox.checked = selectAll.checked
     })
 })
+
+function searchText() {
+    const search = document.getElementById("search").value
+    const inboxItem = document.getElementsById("inbox-history")
+    search = search.replace(/[a-z]\w/g)
+
+    let pattern = new RegExp(`${search}`,"gi")
+
+    inboxItem.innerHTML = search.textContent.replace(pattern, match => `<mark>${match}</mark>`)
+}

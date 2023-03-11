@@ -25,6 +25,12 @@ h1 {
     font-weight: 200;
 }
 
+span {
+    display: block;
+    font-size: 18px;
+    font-style: italic;
+}
+
 #search-label {
     position: relative;
     margin: 0px auto;
@@ -58,6 +64,7 @@ h1 {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
+    margin-top: 5px;
 }
 
 #skills-container {
@@ -127,9 +134,13 @@ h2 {
     padding: 2px;
 }
 
+input[type="checkbox"] {
+    accent-color: #0353a450;
+}
+
 .inbox-checkboxes {
-    width: 18px;
-    height: 18px;
+    width: 15px;
+    height: 15px;
 }
 
 .inbox-item {
