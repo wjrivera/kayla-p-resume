@@ -1,6 +1,7 @@
 body {
     margin: 0;
     background-color: #e3f2fd;
+    font-family: 'Roboto Slab', serif;
 }
 
 #email-header, #logo-and-title {
@@ -12,14 +13,13 @@ body {
     gap: 2px;
 }
 
-#email-logo {
+#email-header img {
     width: 60px;
     height: 60px;
 }
 
 h1 {
     color: #90caf9;
-    font-family: 'Roboto Slab', serif;
     font-weight: 200;
 }
 
@@ -37,11 +37,17 @@ span {
     position: relative;
 }
 
-#search, h2, .skill, #inbox-history {
+#search, 
+h2, 
+#skills-list li, 
+#inbox-history, 
+#search-label input,
+#contact-info,
+#contact-info li {
     border-radius: 10px;
 }
 
-#search {
+#search-label input {
     width: 600px;
     height: 50px;
     padding: 0px 40px;
@@ -53,7 +59,7 @@ span {
     color: #33415c;
 }
 
-#magnify {
+#search-label svg {
     position: absolute;
     left: 0px;
     padding: 10px 12px;
@@ -65,7 +71,8 @@ span {
 }
 
 mark {
-    background-color: #90caf9;
+    background-color: #90caf980;
+    border-radius: 5px;
 }
 
 #main-area {
@@ -86,29 +93,39 @@ h2 {
     padding: 20px 30px;
     max-width: 100px;
     margin: 0px 5px;
-    font-family: 'Roboto Slab', serif;
     font-size: 20px;
     font-weight: 200;
     text-align: center;
 }
 
-#skills-list {
+#skills-list, #contact-info {
     list-style: none;
-    font-family: 'Roboto Slab', serif;
     font-size: 15px;
     margin-top: 0px;
     padding: 5px;
 }
 
-.skill {
+#skills-list li {
     margin: 5px 0px;
     background-color: #0353a450;
     padding: 5px 50px;
     color: #33415c;
 }
 
-.skill:hover {
+#skills-list li:hover {
     background-color: #979dac30;
+}
+
+#contact-info li {
+    background-color: #979dac30;
+    color: #33415c;
+    margin: 5px 0px;
+    padding: 5px 20px;
+    font-size: 12px;
+}
+
+#contact-info li:hover {
+    background-color: #0353a450;
 }
 
 #inbox-history {
@@ -137,13 +154,12 @@ h2 {
 
 h4 {
     color: white;
-    font-family: 'Roboto Slab', serif;
     font-size: 15px;
     font-weight: 200;
     padding-right: 10px;
 }
 
-.refresh-and-setting:hover {
+#icons svg:hover {
     background-color: #33415c10;
     border-radius: 50%;
     padding: 2px;
@@ -153,7 +169,7 @@ input[type="checkbox"] {
     accent-color: #0353a410;
 }
 
-.inbox-checkboxes {
+.inbox-title input {
     width: 15px;
     height: 15px;
 }
@@ -167,7 +183,6 @@ input[type="checkbox"] {
     border-top: 1px solid #FFFFFF40;
     border-bottom: 1px solid #FFFFFF40;
     padding: 10px 10px;
-    font-family: 'Roboto Slab', serif;
     font-size: 15px;
 }
 
@@ -190,7 +205,6 @@ input[type="checkbox"] {
     align-items: center;
     padding: 15px 0px;
     text-align: center;
-    font-family: 'Roboto Slab', serif;
     font-size: 16px;
     color: #33415c;
 }
@@ -201,4 +215,8 @@ input[type="checkbox"] {
     border: 1px solid #FFFFFF40;
     border-radius: 5px;
     height: 60px;
+}
+
+.degree-and-certs:hover {
+    background-color: #90caf9;
 }
