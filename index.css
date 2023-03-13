@@ -130,7 +130,7 @@ h2 {
 
 #inbox-history {
     width: 900px;
-    height: 100vh;
+    height: auto;
     background-color: #33415c99;
 }
 
