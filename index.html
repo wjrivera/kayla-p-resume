@@ -17,12 +17,13 @@
                     <h1>Kayla Pagan<span>Frontend Developer</span></h1>
                 </div>
                 <label id="search-label">
-                    <input id="search" type="text" placeholder="Search Resume">
+                    <input oninput="searchText()" id="search" type="text" placeholder="Search Resume">
                     <svg id="magnify" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z" clip-rule="evenodd" /></svg>   
                 </label>
             </div>
-        </header>    
+        </header>   
 
+        <section>
             <div id="main-area">
                 <div id="skills-container">
                     <h2>Skills</h2>
@@ -43,10 +44,13 @@
                 </div>
     
                 <div id="inbox-history">
-                    <div id="icons">
-                        <input class="top-of-inbox-icons" id="select-all" type="checkbox">
-                        <svg class="top-of-inbox-icons refresh-and-setting" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" /></svg>
-                        <svg class="top-of-inbox-icons refresh-and-setting" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75" /></svg>                            
+                    <div id="top-of-inbox">
+                        <div id="icons">
+                            <input class="top-of-inbox-icons" id="select-all" type="checkbox">
+                            <svg class="top-of-inbox-icons refresh-and-setting" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" /></svg>
+                            <svg class="top-of-inbox-icons refresh-and-setting" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75" /></svg>                            
+                        </div>
+                        <h4>1-2 of Work History</h4>
                     </div>
                     <div class="inbox-item">
                         <div class="inbox-title">
@@ -75,8 +79,24 @@
                             <li>Analyzed loan applications and credit reports to determine loan eligibility and risk level.</li>
                         </ul>
                     </div>
+
+                    <div>
+                        <h4 id="degrees-and-certs-title">Degrees and Certifications</h4>
+                        <div id="degrees-and-certs-container">
+                            <div class="degree-and-certs">
+                                <p>
+                                    Professional Scrum Master I
+                                </p>
+                            </div>
+                            <div class="degree-and-certs">
+                                <p>
+                                    Associates in Arts
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </section>
         <script src="index.js"></script>
     </body>
 </html>

@@ -14,12 +14,14 @@ selectAll.addEventListener("change", () => {
     })
 })
 
+/* Work in progress on making search bar functional to highlight text
+
 function searchText() {
-    const search = document.getElementById("search").value
-    const inboxItem = document.getElementsById("inbox-history")
-    search = search.replace(/[a-z]\w/g)
+        let search = document.getElementById("search").value.trim()
+        const inboxHistory = document.getElementById("inbox-history")
 
-    let pattern = new RegExp(`${search}`,"gi")
-
-    inboxItem.innerHTML = search.textContent.replace(pattern, match => `<mark>${match}</mark>`)
-}
+        if (search !== "") {
+            let regExp = new RegExp(search, "gi")
+            inboxHistory.innerHTML = (inboxHistory.textContent).replace(regExp, match => `<mark>${match}</mark>`)
+        }
+}*/

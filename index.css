@@ -3,14 +3,12 @@ body {
     background-color: #e3f2fd;
 }
 
-#email-header {
+#email-header, #logo-and-title {
     display: flex;
     align-items: center;
 }
 
 #logo-and-title {
-    display: flex;
-    align-items: center;
     gap: 2px;
 }
 
@@ -31,16 +29,22 @@ span {
     font-style: italic;
 }
 
+#search-label, #inbox-history {
+    margin: 0px auto;
+}
+
 #search-label {
     position: relative;
-    margin: 0px auto;
+}
+
+#search, h2, .skill, #inbox-history {
+    border-radius: 10px;
 }
 
 #search {
     width: 600px;
     height: 50px;
     padding: 0px 40px;
-    border-radius: 10px;
     border: none;
     background-color: #979dac30;
     outline: none;
@@ -60,6 +64,10 @@ span {
     color: #979dac;
 }
 
+mark {
+    background-color: #90caf9;
+}
+
 #main-area {
     display: flex;
     justify-content: flex-start;
@@ -75,12 +83,9 @@ span {
 h2 {
     background-color: #979dac30;
     color: #33415c;
-    border-radius: 10px;
     padding: 20px 30px;
     max-width: 100px;
-    margin-left: 5px;
-    margin-top: 0px;
-    margin-bottom: 5px;
+    margin: 0px 5px;
     font-family: 'Roboto Slab', serif;
     font-size: 20px;
     font-weight: 200;
@@ -98,7 +103,6 @@ h2 {
 .skill {
     margin: 5px 0px;
     background-color: #0353a450;
-    border-radius: 10px;
     padding: 5px 50px;
     color: #33415c;
 }
@@ -109,10 +113,8 @@ h2 {
 
 #inbox-history {
     width: 900px;
-    height: 90vh;
+    height: 100vh;
     background-color: #33415c99;
-    margin: 0px auto;
-    border-radius: 10px;
 }
 
 #icons {
@@ -122,10 +124,23 @@ h2 {
     gap: 20px;
 }
 
+#top-of-inbox {
+    display: flex;
+    justify-content: space-between;
+}
+
 .top-of-inbox-icons {
     width: 18px;
     height: 18px;
     color: white;
+}
+
+h4 {
+    color: white;
+    font-family: 'Roboto Slab', serif;
+    font-size: 15px;
+    font-weight: 200;
+    padding-right: 10px;
 }
 
 .refresh-and-setting:hover {
@@ -135,7 +150,7 @@ h2 {
 }
 
 input[type="checkbox"] {
-    accent-color: #0353a450;
+    accent-color: #0353a410;
 }
 
 .inbox-checkboxes {
@@ -160,4 +175,30 @@ input[type="checkbox"] {
     display: flex;
     align-items: center;
     gap: 10px;
+}
+
+#degrees-and-certs-title {
+    text-align: center;
+    font-size: 20px;
+    margin: 5px 0px;
+}
+
+#degrees-and-certs-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    padding: 15px 0px;
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+    font-size: 16px;
+    color: #33415c;
+}
+
+.degree-and-certs {
+    width: 300px;
+    background-color: #90caf990;
+    border: 1px solid #FFFFFF40;
+    border-radius: 5px;
+    height: 60px;
 }
