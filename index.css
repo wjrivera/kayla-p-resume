@@ -105,6 +105,11 @@ h2 {
     padding: 5px;
 }
 
+#contact-info a {
+    text-decoration: overline dotted;
+    color: #33415c;
+}
+
 #skills-list li {
     margin: 5px 0px;
     background-color: #0353a450;
