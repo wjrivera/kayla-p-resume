@@ -1,18 +1,45 @@
 const selectAll = document.getElementById("select-all")
 const inboxCheckboxes = document.querySelectorAll(".inbox-checkboxes")
 
-function checkAll() {
-    const isChecked = selectAll.checked
-    for (let i = 0; i < inboxCheckboxes.length; i++) {
-        inboxCheckboxes[i].checked = isChecked
+
+function changeBackground() {
+    for(let i = 0; i < inboxCheckboxes.length; i++){
+        inboxCheckboxes[i].addEventListener('change', (e) => {
+            const changeBg = document.getElementById(e.target.id)
+            changeBg.parentElement.classList.toggle('bg-lightgrey')
+        })
     }
 }
 
-selectAll.addEventListener("change", () => {
-    Array.from(inboxCheckboxes).map((inbox) => {
-        inbox.checked = selectAll.checked
-    })
+changeBackground()
+
+selectAll.addEventListener('change',function(e){
+    inboxCheckboxes.forEach(n=>n.checked=this.checked)
+    for(let i = 0; i < inboxCheckboxes.length; i++){
+            inboxCheckboxes[i].parentElement.classList.toggle('bg-lightgrey')
+        } 
 })
+
+inboxCheckboxes.forEach( n=>{
+  n.addEventListener('change',function(e){
+    if( !this.checked && selectAll.checked )selectAll.checked=false
+  })
+})
+
+// selectAll.addEventListener("change", () => {
+//     Array.from(inboxCheckboxes).map((inbox) => {
+//         if(inbox.checked = selectAll.checked){
+//             for(let i = 0; i < inboxCheckboxes.length; i++){
+//                 inboxCheckboxes[i].parentElement.classList.add('bg-lightgrey')
+//             } 
+//         } else {
+//             for(let i = 0; i < inboxCheckboxes.length; i++){
+//                 inboxCheckboxes[i].parentElement.classList.remove('bg-lightgrey')
+//             }
+//         }
+//     })
+    
+// })
 
 /* Work in progress on making search bar functional to highlight text
 

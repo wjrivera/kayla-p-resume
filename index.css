@@ -117,6 +117,13 @@ h2 {
     color: #33415c;
 }
 
+#skills-list li:hover, 
+input[type="checkbox"], 
+#icons svg:hover, 
+.degree-and-certs:hover {
+    cursor: pointer;
+}
+
 #skills-list li:hover {
     background-color: #979dac30;
 }
@@ -180,15 +187,19 @@ input[type="checkbox"] {
 }
 
 .inbox-item {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-direction: column;
     color: white;
     border-top: 1px solid #FFFFFF40;
     border-bottom: 1px solid #FFFFFF40;
     padding: 10px 10px;
     font-size: 15px;
+}
+
+.inbox-item label {
+    display: inline;
+}
+
+.bg-lightgrey {
+    background-color: #979dac;
 }
 
 .inbox-title {
