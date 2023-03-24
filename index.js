@@ -17,6 +17,7 @@ changeBackground()
 //here we want to check if the checkbox is already "checked" or not
 //if so, then let's change the background, otherwise, remove the styling class.
 //you can use for loops or the forEach extension method.
+//we are not using the event parameter, so you can add a _ to look cleaner.
 selectAll.addEventListener('change', function (_) {
     inboxCheckboxes.forEach(checkbox => {
         checkbox.checked = selectAll.checked;
