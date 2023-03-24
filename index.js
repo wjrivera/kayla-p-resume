@@ -4,7 +4,7 @@ const $search = document.getElementById('search');
 const $box = document.getElementsByClassName('searchable');
 
 function changeBackground() {
-    for(let i = 0; i < inboxCheckboxes.length; i++){
+    for (let i = 0; i < inboxCheckboxes.length; i++) {
         inboxCheckboxes[i].addEventListener('change', (e) => {
             const changeBg = document.getElementById(e.target.id)
             changeBg.parentElement.classList.toggle('bg-lightgrey')
@@ -17,20 +17,20 @@ changeBackground()
 //here we want to check if the checkbox is already "checked" or not
 //if so, then let's change the background, otherwise, remove the styling class.
 //you can use for loops or the forEach extension method.
-selectAll.addEventListener('change',function(_){
+selectAll.addEventListener('change', function (_) {
     inboxCheckboxes.forEach(checkbox => {
         checkbox.checked = selectAll.checked;
-        if(checkbox.checked)
+        if (checkbox.checked)
             checkbox.parentElement.classList.add('bg-lightgrey')
         else
             checkbox.parentElement.classList.remove('bg-lightgrey')
     });
 })
 
-inboxCheckboxes.forEach( n=>{
-  n.addEventListener('change',function(e){
-    if( !this.checked && selectAll.checked )selectAll.checked=false
-  })
+inboxCheckboxes.forEach(n => {
+    n.addEventListener('change', function (e) {
+        if (!this.checked && selectAll.checked) selectAll.checked = false
+    })
 })
 
 // References:
@@ -46,7 +46,7 @@ $search.addEventListener('input', (event) => {
 
     Array.from($box).forEach((element) => {
         let text = element.innerHTML;
-        if(text.length <= 2) return;
+        if (text.length <= 2) return;
         text = text.replace(/(<mark class="highlight">|<\/mark>)/gim, '');
         element.innerHTML = text.replace(regex, '<mark class="highlight">$&</mark>');
     });
