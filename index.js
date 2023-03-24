@@ -1,6 +1,7 @@
 const selectAll = document.getElementById("select-all")
 const inboxCheckboxes = document.querySelectorAll(".inbox-checkboxes")
-
+const $search = document.getElementById('search');
+const $box = document.getElementsByClassName('searchable');
 
 function changeBackground() {
     for(let i = 0; i < inboxCheckboxes.length; i++){
@@ -13,11 +14,14 @@ function changeBackground() {
 
 changeBackground()
 
-selectAll.addEventListener('change',function(e){
-    inboxCheckboxes.forEach(n=>n.checked=this.checked)
-    for(let i = 0; i < inboxCheckboxes.length; i++){
-            inboxCheckboxes[i].parentElement.classList.toggle('bg-lightgrey')
-        } 
+selectAll.addEventListener('change',function(_){
+    inboxCheckboxes.forEach(checkbox => {
+        checkbox.checked = selectAll.checked;
+        if(checkbox.checked)
+            checkbox.parentElement.classList.add('bg-lightgrey')
+        else
+            checkbox.parentElement.classList.remove('bg-lightgrey')
+    });
 })
 
 inboxCheckboxes.forEach( n=>{
@@ -26,29 +30,17 @@ inboxCheckboxes.forEach( n=>{
   })
 })
 
-// selectAll.addEventListener("change", () => {
-//     Array.from(inboxCheckboxes).map((inbox) => {
-//         if(inbox.checked = selectAll.checked){
-//             for(let i = 0; i < inboxCheckboxes.length; i++){
-//                 inboxCheckboxes[i].parentElement.classList.add('bg-lightgrey')
-//             } 
-//         } else {
-//             for(let i = 0; i < inboxCheckboxes.length; i++){
-//                 inboxCheckboxes[i].parentElement.classList.remove('bg-lightgrey')
-//             }
-//         }
-//     })
-    
-// })
+// https://stackoverflow.com/questions/8644428/how-to-highlight-text-using-javascript
+// https://www.coderperfect.com/array-foreach-is-used-to-go-over-the-results-of-getelementsbyclassname-in-js/
+$search.addEventListener('input', (event) => {
+    const searchText = event.target.value;
+    const regex = new RegExp(searchText, 'gi');
 
-/* Work in progress on making search bar functional to highlight text
-
-function searchText() {
-        let search = document.getElementById("search").value.trim()
-        const inboxHistory = document.getElementById("inbox-history")
-
-        if (search !== "") {
-            let regExp = new RegExp(search, "gi")
-            inboxHistory.innerHTML = (inboxHistory.textContent).replace(regExp, match => `<mark>${match}</mark>`)
-        }
-}*/
+    Array.from($box).forEach((element) => {
+        let text = element.innerHTML;
+        if(text.length <= 2) return;
+        text = text.replace(/(<mark class="highlight">|<\/mark>)/gim, '');
+        const newText = text.replace(regex, '<mark class="highlight">$&</mark>');
+        element.innerHTML = newText;
+    });
+});

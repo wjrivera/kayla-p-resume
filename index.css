@@ -236,3 +236,7 @@ input[type="checkbox"] {
 .degree-and-certs:hover {
     background-color: #90caf9;
 }
+
+.highlight {
+    background-color: yellow;
+}
