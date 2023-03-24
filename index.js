@@ -14,6 +14,9 @@ function changeBackground() {
 
 changeBackground()
 
+//here we want to check if the checkbox is already "checked" or not
+//if so, then let's change the background, otherwise, remove the styling class.
+//you can use for loops or the forEach extension method.
 selectAll.addEventListener('change',function(_){
     inboxCheckboxes.forEach(checkbox => {
         checkbox.checked = selectAll.checked;
@@ -30,8 +33,13 @@ inboxCheckboxes.forEach( n=>{
   })
 })
 
+// References:
 // https://stackoverflow.com/questions/8644428/how-to-highlight-text-using-javascript
 // https://www.coderperfect.com/array-foreach-is-used-to-go-over-the-results-of-getelementsbyclassname-in-js/
+
+//Were, we get the text from the input, go through all searchable classes and replace
+//the text with mark tag with class styling "highlight" which is defined in your css.
+//We are checking for text longer than 2 characters, but you can remove that if you want.
 $search.addEventListener('input', (event) => {
     const searchText = event.target.value;
     const regex = new RegExp(searchText, 'gi');
@@ -40,7 +48,6 @@ $search.addEventListener('input', (event) => {
         let text = element.innerHTML;
         if(text.length <= 2) return;
         text = text.replace(/(<mark class="highlight">|<\/mark>)/gim, '');
-        const newText = text.replace(regex, '<mark class="highlight">$&</mark>');
-        element.innerHTML = newText;
+        element.innerHTML = text.replace(regex, '<mark class="highlight">$&</mark>');
     });
 });
